@@ -1,0 +1,6 @@
+nome = input("digite seu nome: ")
+peso = float(input("digite sua peso: "))
+altura = float(input("digite sua altura: "))
+imc = peso / (altura ** 2)
+# print("o imc de" , nome , "vale:" , imc)
+print(f"O imc de {nome} vale: {imc:.2f}")

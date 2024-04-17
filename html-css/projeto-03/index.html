@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentoria</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Staatliches&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+   
+
+    <header>
+
+
+        <h1>Avalie sua Mentoria</h1>
+
+        <p>Chegou a hora de avaliar o seu mentor. Bora lá?</p>
+
+        <img src="./assets/img1.png" 
+        alt="caracter exemplificando comentarios">
+
+        <div class = "infoHeader">
+            <h1>Informações Pessoais</h1>
+        </div>
+
+        
+        
+    </header>    
+
+    <main>
+
+        <form id = "evento">
+
+            <div class="infoUser">
+
+                <div class="nome">
+
+                    <div class="campoInput">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome">
+                    </div>
+                    
+                    <div class="campoInput">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input type="text" id="sobrenome">
+                    </div>
+
+                </div>
+
+                
+                <div class="campoInput">
+                    <label for="emailField">Email</label>
+                    <input type="email" id="emailField">           
+                </div>
+
+            </div>
+
+            <h1>Informacoes do mentor</h1>
+
+            <div class="mentor">
+                <div class="campoInput">
+                    <label for="mentor">Selecione quem foi seu mentor</label>
+                    <select class="inputSelect" id="mentor">
+                        <option value="valor a">Valor 1</option>
+                        <option value="valor b">Valor 2</option>
+                        <option value="valor c">Valor 3</option>
+                    </select>
+
+                </div>
+
+                <div class="campoInput">
+                    <label for="feedback">Feedback sobre o mentor</label>
+                    <textarea name="feedback" id="feedback" ></textarea>          
+                </div>
+                
+                <div class="check">
+                    <input type="checkbox" id="event-private" nome="""event=private">
+                    <label for="event-private">evento privado</label>
+                </div>
+            </div>
+
+            <h1>Agendando proxima mentoria</h1>
+
+            <div class="data">
+
+
+                <div class="campoInput">
+                    <label for="event-data">Data</label>
+                    <input type="date" id="event-data">           
+                </div>
+                <div class="campoInput">
+                    <label for="event-begin">Das</label>
+                    <input type="time" id="event-begin">           
+                </div>
+                <div class="campoInput">
+                    <label for="event-end">Das</label>
+                    <input type="time" id="event-end">           
+                </div>
+                
+
+            </div>
+
+            <input 
+            type="submit"
+            class="button"
+            value="Salvar"
+            form="evento"
+            
+            >
+                
+        </form>
+    </main>
+        
+
+    
+    
+</body>
+
+</html>
