@@ -1,0 +1,68 @@
+Problema: Sistema de Gerenciamento de Restaurante
+Descrição
+Você foi contratado para desenvolver um sistema de gerenciamento para um restaurante. O sistema deve gerenciar o cardápio, os pedidos dos clientes e o estoque dos ingredientes. O restaurante deve ser capaz de realizar as seguintes operações:
+
+Adicionar novos pratos ao cardápio. 
+Registrar pedidos dos clientes.
+Gerenciar o estoque de ingredientes.
+Verificar a disponibilidade de um prato antes de registrar o pedido.
+Listar todos os pratos disponíveis no cardápio.
+Listar todos os pedidos realizados.
+Listar ingredientes com estoque baixo (menos de uma quantidade mínima definida).
+Requisitos
+Implemente as seguintes classes e seus métodos:
+
+Classe Ingrediente
+Representa um ingrediente no estoque do restaurante.
+
+Atributos:
+
+nome: string
+quantidade: int (quantidade disponível no estoque)
+quantidade_minima: int (quantidade mínima desejada em estoque)
+Métodos:
+
+__init__(self, nome, quantidade, quantidade_minima): inicializa um novo ingrediente com os dados fornecidos.
+adicionar_estoque(self, quantidade): adiciona a quantidade fornecida ao estoque do ingrediente.
+remover_estoque(self, quantidade): remove a quantidade fornecida do estoque do ingrediente, se houver estoque suficiente.
+Classe Prato
+Representa um prato no cardápio do restaurante.
+
+Atributos:
+
+nome: string
+ingredientes: dicionário com nome do ingrediente como chave e quantidade necessária como valor
+Métodos:
+
+__init__(self, nome, ingredientes): inicializa um novo prato com os dados fornecidos.
+Classe Pedido
+Representa um pedido feito por um cliente.
+
+Atributos:
+
+numero_pedido: int (um identificador único para cada pedido)
+pratos: lista de objetos Prato
+status: string (pode ser 'Pendente', 'Em Preparação', 'Concluído')
+Métodos:
+
+__init__(self, numero_pedido, pratos): inicializa um novo pedido com os dados fornecidos e define status como 'Pendente'.
+atualizar_status(self, status): atualiza o status do pedido.
+Classe Restaurante
+Gerencia o cardápio, os pedidos e o estoque de ingredientes.
+
+Atributos:
+
+cardapio: dicionário com nome do prato como chave e objeto Prato como valor
+estoque: dicionário com nome do ingrediente como chave e objeto Ingrediente como valor
+pedidos: lista de objetos Pedido
+numero_pedido_atual: int (usado para gerar identificadores únicos para pedidos)
+Métodos:
+
+__init__(self): inicializa o restaurante com um cardápio vazio, um estoque vazio, uma lista de pedidos vazia e numero_pedido_atual igual a 1.
+adicionar_prato(self, prato): adiciona um novo prato ao cardápio.
+registrar_pedido(self, nomes_pratos): registra um novo pedido, verifica a disponibilidade dos ingredientes e atualiza o estoque.
+adicionar_ingrediente(self, ingrediente): adiciona um novo ingrediente ao estoque.
+entrada_estoque(self, nome_ingrediente, quantidade): adiciona uma quantidade específica de um ingrediente ao estoque.
+listar_pratos_disponiveis(self): retorna uma lista de todos os pratos disponíveis no cardápio.
+listar_pedidos(self): retorna uma lista de todos os pedidos realizados.
+listar_ingredientes_baixo_estoque(self): retorna uma lista de ingredientes com quantidade abaixo da mínima desejada.
